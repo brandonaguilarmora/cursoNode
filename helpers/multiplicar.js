@@ -6,14 +6,16 @@ const multiplicars = async(base, listar, hasta)=>{
         console.clear();
         //console.log(base)
         //console.log(listar)
-        let salida="=========================\n".green+
-                   `Tabla del ${colors.red(base)}\n`.blue+
-                   "=========================\n".green
+        let consola=""
+        let salida= "=========================\n".green+
+                    `Tabla del ${colors.red(base)}\n`.blue+
+                    "=========================\n".green
+
         for(let i=1;i<=hasta;i++){
-            
-           salida+=`${(String(base).rainbow)} ${"*".yellow} ${colors.yellow(i)}  = ${String(base*i).rainbow}\n`
+            consola+=`${base} * ${(i)}  = ${(base*i)}\n`
+            salida+=`${(String(base).rainbow)} ${"*".yellow} ${colors.yellow(i)}  = ${String(base*i).rainbow}\n`
         }
-        fs.writeFileSync(`./salida/Tabla del ${base}.txt`, salida);
+        fs.writeFileSync(`./salida/Tabla del ${base}.txt`, consola);
         if(listar){
             console.log(salida)
             return `Tabla del ${base}`
