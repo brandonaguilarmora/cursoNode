@@ -1,6 +1,6 @@
 # notas:
 
-'''
+```
 Options:
       --help     Show help                                             [boolean]
       --version  Show version number                                   [boolean]
@@ -10,4 +10,4 @@ Options:
                  si es
                  true                                 [boolean] [default: false]
   -h, --hasta    marca el valor hasta                     [number] [default: 10]
-'''
+```
